@@ -16,7 +16,9 @@
 
 <br/>
 
-· CE student at Kathmandu University · Building with C++ and Python · Interested in computer vision, systems programming, and ML ·
+<div align="center">
+  <img src="assets/about.svg" alt="About Me" width="100%"/>
+</div>
 
 <br/>
 
