@@ -1,96 +1,125 @@
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&width=680&lines=Hey%2C+I'm+Aryan+Khatri;Computer+Engineering+%40+Kathmandu+University;C%2B%2B+%C2%B7+Python+%C2%B7+Computer+Vision" alt="Typing SVG" />
+  <img src="assets/banner.svg" alt="Aryan Khatri" width="100%"/>
+</div>
 
 <br/>
 
+<div align="center">
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aryankhatr1)
 &nbsp;
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aryan9725@student.ku.edu.np)
+[![Email](https://img.shields.io/badge/E--Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aryan9725@student.ku.edu.np)
+&nbsp;
+[![GitHub](https://img.shields.io/badge/aryan2--7-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aryan2-7)
 
 </div>
 
----
+<br/>
 
-CE student at Kathmandu University · Building with C++ and Python ·
-Interested in computer vision, systems programming, and ML tooling ·
+· CE student at Kathmandu University · Building with C++ and Python · Interested in computer vision, systems programming, and ML ·
+
+<br/>
+
+<div align="center">
+  <img src="assets/divider.svg" alt="" width="100%"/>
+</div>
+
+<br/>
 
 ## Projects
 
-### SmartAttendance
+<table align="center" width="100%" cellspacing="0" cellpadding="8" border="0">
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/SmartAttendance">
+        <img src="assets/card_smartattendance.svg" alt="SmartAttendance" width="100%"/>
+      </a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/ToDoCLI">
+        <img src="assets/card_todocli.svg" alt="ToDoCLI" width="100%"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/airpods-cli">
+        <img src="assets/card_airpods.svg" alt="airpods-cli" width="100%"/>
+      </a>
+    </td>
+    <td valign="top" width="50%"></td>
+  </tr>
+</table>
 
-A facial recognition–based attendance system that registers faces, identifies students in real time, and logs records — replacing manual roll calls entirely.
+<br/>
 
-**Stack:** C++17 · OpenCV (LBPH) · Qt6 · SQLite · CMake
+<div align="center">
+  <img src="assets/divider.svg" alt="" width="100%"/>
+</div>
 
-[![View Repo](https://img.shields.io/badge/aryan2--7%2FSmartAttendance-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/aryan2-7/SmartAttendance)
-
----
-
-### ToDoCLI
-
-A fully installable command-line to-do manager with priority filtering and persistent local storage, distributable via `pip` or `uv` directly from GitHub.
-
-**Stack:** Python · Click · uv · pyproject.toml
-
-[![View Repo](https://img.shields.io/badge/aryan2--7%2FToDoCLI-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/aryan2-7/ToDoCLI)
-
----
-
-### airpods-cli *(in progress)*
-
-A macOS system utility for switching AirPods noise-control modes (ANC, Transparency, Adaptive, Off) from the terminal. Built for public release with full CI/CD and PyPI Trusted Publishing.
-
-**Stack:** Python · Click · uv · hatchling · GitHub Actions
-
-[![View Repo](https://img.shields.io/badge/aryan2--7%2Fairpods--cli-24292e?style=flat-square&logo=github&logoColor=white)](https://github.com/aryan2-7/airpods-cli)
-
----
+<br/>
 
 ## Tech Stack
 
-| Category | Technologies |
-|:---|:---|
-| **Languages** | Python, C++17, C, HTML5 |
-| **Libraries** | OpenCV, Qt6, Click, NumPy, Flask |
-| **Tooling** | Git, CMake, uv, ruff, pytest, GitHub Actions |
-| **Databases** | SQLite |
-| **AI / ML** | Ollama, LBPH face recognition |
-| **Geospatial** | Rasterio, Folium, NDVI / Sentinel-2 |
-| **Environment** | macOS, Linux, VS Code |
+<div align="center">
+  <img src="assets/skills.svg" alt="Tech Stack" width="100%"/>
+</div>
 
-## What I'm Learning
+<br/>
 
-- **Computer vision** — moving beyond LBPH toward deep learning–based recognition (YOLO, FaceNet)
-- **Python packaging** — distributable CLI apps with `click`, `uv`, and `pyproject.toml`
-- **Data structures & algorithms** — systematic preparation for internship technical interviews
-- **Geospatial ML** — satellite imagery analysis with `rasterio` and Sentinel-2 data
+<div align="center">
+  <img src="assets/divider.svg" alt="" width="100%"/>
+</div>
 
-## Certifications
-
-| Certificate | Issuer | Date | Credential |
-|:---|:---|:---|:---:|
-| AI Skills Fest 2026 | Microsoft | Jun 2026 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/dfadc722-79ae-4e82-8d71-31d25a80cf8a) |
-| CS50P — Introduction to Programming with Python | Harvard / edX | Jul 2024 | [![Certificate](https://img.shields.io/badge/Certificate-1572B6?style=flat-square&logoColor=white)](https://certificates.cs50.io/4c151af0-e81b-4b10-8018-1b55220207cd.pdf) |
-| Python Essentials 2 | Cisco Networking Academy | Dec 2023 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/9bfd7438-fb03-4d25-b26b-3358765a5579) |
-| Introduction to Data Science | Cisco Networking Academy | Jan 2024 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/a24b86f1-c57f-49f6-9db3-a3676c4ecdb9) |
+<br/>
 
 ## GitHub Stats
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=aryan2-7&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" />
-&nbsp;
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryan2-7&layout=compact&theme=github_dark&hide_border=true&langs_count=6" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=aryan2-7&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58A6FF&icon_color=3DDC84&text_color=8B949E&border_radius=8"/>
+&nbsp;&nbsp;
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryan2-7&layout=compact&theme=github_dark&hide_border=true&langs_count=6&bg_color=0d1117&title_color=58A6FF&text_color=8B949E&border_radius=8"/>
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=aryan2-7&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D" />
+<img src="https://streak-stats.demolab.com?user=aryan2-7&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=0d1117&stroke=58A6FF&ring=3DDC84&fire=E6934A&currStreakLabel=58A6FF"/>
 
 </div>
 
----
+<br/>
 
 <div align="center">
-  <sub>Kathmandu, Nepal · Open to internship opportunities</sub>
+  <img src="assets/divider.svg" alt="" width="100%"/>
+</div>
+
+<br/>
+
+## What I'm Learning
+
+<div align="center">
+  <img src="assets/learning.svg" alt="Currently Learning" width="100%"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="assets/divider.svg" alt="" width="100%"/>
+</div>
+
+<br/>
+
+## Certifications
+
+| | Certificate | Issuer | Year | Verify |
+|:---:|:---|:---|:---:|:---:|
+| ★ | **AI Skills Fest 2026** | Microsoft | 2026 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/dfadc722-79ae-4e82-8d71-31d25a80cf8a) |
+| ★ | **CS50P** — Introduction to Programming with Python | Harvard / edX | 2024 | [![PDF](https://img.shields.io/badge/Certificate-1572B6?style=flat-square&logoColor=white)](https://certificates.cs50.io/4c151af0-e81b-4b10-8018-1b55220207cd.pdf) |
+| ★ | **Python Essentials 2** | Cisco Networking Academy | 2023 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/9bfd7438-fb03-4d25-b26b-3358765a5579) |
+| ★ | **Introduction to Data Science** | Cisco Networking Academy | 2024 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/a24b86f1-c57f-49f6-9db3-a3676c4ecdb9) |
+
+<br/>
+
+<div align="center">
+  <img src="assets/footer.svg" alt="" width="100%"/>
 </div>
