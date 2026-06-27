@@ -8,7 +8,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aryankhatr1)
 &nbsp;
-[![Email](https://img.shields.io/badge/aryan9725%40student.ku.edu.np-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aryan9725@student.ku.edu.np)
+[![Email](https://img.shields.io/badge/E--Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aryan9725@student.ku.edu.np)
 &nbsp;
 [![GitHub](https://img.shields.io/badge/aryan2--7-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aryan2-7)
 
@@ -16,9 +16,7 @@
 
 <br/>
 
-CE student at **Kathmandu University**. I write code that ships — a facial recognition attendance system in C++, a macOS CLI utility in Python, geospatial pipelines for satellite imagery. I care more about finishing than about stack.
-
-Actively looking for a paid internship.
+· CE student at Kathmandu University · Building with C++ and Python · Interested in computer vision, systems programming, and ML ·
 
 <br/>
 
@@ -30,23 +28,28 @@ Actively looking for a paid internship.
 
 ## Projects
 
-<div align="center">
-
-<a href="https://github.com/aryan2-7/SmartAttendance">
-  <img src="assets/card_smartattendance.svg" alt="SmartAttendance" width="420"/>
-</a>
-&nbsp;&nbsp;
-<a href="https://github.com/aryan2-7/ToDoCLI">
-  <img src="assets/card_todocli.svg" alt="ToDoCLI" width="420"/>
-</a>
-
-<br/><br/>
-
-<a href="https://github.com/aryan2-7/airpods-cli">
-  <img src="assets/card_airpods.svg" alt="airpods-cli" width="420"/>
-</a>
-
-</div>
+<table align="center" width="100%" cellspacing="0" cellpadding="8" border="0">
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/SmartAttendance">
+        <img src="assets/card_smartattendance.svg" alt="SmartAttendance" width="100%"/>
+      </a>
+    </td>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/ToDoCLI">
+        <img src="assets/card_todocli.svg" alt="ToDoCLI" width="100%"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/airpods-cli">
+        <img src="assets/card_airpods.svg" alt="airpods-cli" width="100%"/>
+      </a>
+    </td>
+    <td valign="top" width="50%"></td>
+  </tr>
+</table>
 
 <br/>
 
