@@ -1,0 +1,77 @@
+```svg
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="900"
+     height="210"
+     viewBox="0 0 900 210">
+
+  <defs>
+
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- Background -->
+  <rect x="1" y="1" width="898" height="208" rx="18"
+        fill="url(#bg)" stroke="#30363D"/>
+
+  <!-- Header -->
+  <text x="36" y="34"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="15"
+        fill="#8B949E">about.txt</text>
+
+  <!-- Line 1 -->
+  <circle cx="42" cy="68" r="4" fill="#58A6FF"/>
+  <text x="58" y="74"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="21">
+    <tspan fill="#E6EDF3">CE student at </tspan>
+    <tspan fill="#58A6FF">Kathmandu University</tspan>
+  </text>
+
+  <!-- Line 2 -->
+  <circle cx="42" cy="108" r="4" fill="#3DDC84"/>
+  <text x="58" y="114"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="21">
+    <tspan fill="#E6EDF3">Building with </tspan>
+    <tspan fill="#3DDC84">C++</tspan>
+    <tspan fill="#E6EDF3"> and </tspan>
+    <tspan fill="#58A6FF">Python</tspan>
+  </text>
+
+  <!-- Line 3 -->
+  <circle cx="42" cy="148" r="4" fill="#E6934A"/>
+  <text x="58" y="154"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="21">
+    <tspan fill="#E6EDF3">Interested in </tspan>
+    <tspan fill="#E6934A">computer vision</tspan>
+    <tspan fill="#E6EDF3">, </tspan>
+    <tspan fill="#58A6FF">systems programming</tspan>
+    <tspan fill="#E6EDF3">, and </tspan>
+    <tspan fill="#3DDC84">ML</tspan>
+  </text>
+
+  <!-- Cursor (fixed position) -->
+  <rect x="830" y="136" width="10" height="22" rx="2"
+        fill="#3DDC84" filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="1;0;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+  </rect>
+
+</svg>
+```
