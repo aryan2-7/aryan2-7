@@ -43,13 +43,18 @@
       </a>
     </td>
   </tr>
+
   <tr>
     <td align="center" valign="top" width="50%">
       <a href="https://github.com/aryan2-7/airpods-cli">
         <img src="assets/card_airpods.svg" alt="airpods-cli" width="100%"/>
       </a>
     </td>
-    <td valign="top" width="50%"></td>
+    <td align="center" valign="top" width="50%">
+      <a href="https://github.com/aryan2-7/PDFtoAudio">
+        <img src="assets/card_pdftoaudio.svg" alt="PDFtoAudio" width="100%"/>
+      </a>
+    </td>
   </tr>
 </table>
 
