@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500">
+
+  <defs>
+
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#3DDC84"/>
+    </linearGradient>
+
+    <linearGradient id="waveFade" x1="0%" x2="100%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#58A6FF"/>
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40"
+            fill="none"
+            stroke="#21262d"
+            stroke-width="1"/>
+    </pattern>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="clip">
+      <rect width="1600" height="500" rx="28"/>
+    </clipPath>
+
+  </defs>
+
+  <!-- Background -->
+
+  <rect width="1600" height="500" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="500" fill="url(#grid)" opacity="0.45"/>
+
+  <!-- Animated shimmer -->
+
+  <g clip-path="url(#clip)">
+    <rect x="-300"
+          y="0"
+          width="180"
+          height="500"
+          fill="white"
+          opacity="0.05"
+          transform="rotate(18 0 0)">
+
+      <animate attributeName="x"
+               values="-300;1900"
+               dur="7s"
+               repeatCount="indefinite"/>
+
+    </rect>
+  </g>
+
+  <!-- Decorative waveform -->
+
+  <g stroke="url(#waveFade)"
+     stroke-width="4"
+     fill="none"
+     filter="url(#glow)"
+     opacity="0.85">
+
+    <path d="M930 250
+             L955 250
+             L970 180
+             L985 320
+             L1000 130
+             L1015 360
+             L1030 170
+             L1045 330
+             L1060 210
+             L1075 250
+             L1090 160
+             L1105 340
+             L1120 250
+             L1140 210
+             L1160 250
+             L1180 180
+             L1200 310
+             L1220 240
+             L1240 250
+             L1260 210
+             L1280 250">
+
+      <animate attributeName="opacity"
+               values="0.3;1;0.3"
+               dur="2.5s"
+               repeatCount="indefinite"/>
+
+    </path>
+
+  </g>
+
+  <!-- Icons -->
+
+  <text x="930"
+        y="165"
+        font-size="62"
+        font-family="'Segoe UI Emoji','Apple Color Emoji',sans-serif">
+📄
+  </text>
+
+  <text x="1075"
+        y="165"
+        font-size="62"
+        font-family="'Segoe UI Emoji','Apple Color Emoji',sans-serif">
+→
+  </text>
+
+  <text x="1180"
+        y="165"
+        font-size="62"
+        font-family="'Segoe UI Emoji','Apple Color Emoji',sans-serif">
+🔊
+  </text>
+
+  <!-- Title -->
+
+  <text x="90"
+        y="170"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="66"
+        font-weight="700"
+        fill="#E6EDF3">
+
+PDF<tspan fill="#58A6FF">to</tspan>Audio
+
+  </text>
+
+  <!-- Subtitle -->
+
+  <text x="90"
+        y="225"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="26"
+        fill="#8B949E">
+
+Convert PDF documents into natural-sounding audio from the terminal.
+
+  </text>
+
+  <!-- Divider -->
+
+  <line x1="90"
+        y1="255"
+        x2="650"
+        y2="255"
+        stroke="url(#accent)"
+        stroke-width="2"/>
+
+  <!-- Tech pills -->
+
+  <g font-family="'JetBrains Mono','Fira Code',monospace"
+     font-size="18">
+
+    <rect x="90" y="295" width="90" height="38" rx="19"
+          fill="#21262d" stroke="#30363d"/>
+    <text x="135" y="320" fill="#58A6FF" text-anchor="middle">PyMuPDF</text>
+
+    <rect x="195" y="295" width="88" height="38" rx="19"
+          fill="#21262d" stroke="#30363d"/>
+    <text x="239" y="320" fill="#3DDC84" text-anchor="middle">Kokoro</text>
+
+    <rect x="298" y="295" width="72" height="38" rx="19"
+          fill="#21262d" stroke="#30363d"/>
+    <text x="334" y="320" fill="#E6934A" text-anchor="middle">Torch</text>
+
+    <rect x="385" y="295" width="122" height="38" rx="19"
+          fill="#21262d" stroke="#30363d"/>
+    <text x="446" y="320" fill="#58A6FF" text-anchor="middle">SoundFile</text>
+
+    <rect x="522" y="295" width="84" height="38" rx="19"
+          fill="#21262d" stroke="#30363d"/>
+    <text x="564" y="320" fill="#3DDC84" text-anchor="middle">NumPy</text>
+
+    <rect x="621" y="295" width="84" height="38" rx="19"
+          fill="#21262d" stroke="#30363d"/>
+    <text x="663" y="320" fill="#E6934A" text-anchor="middle">Regex</text>
+
+  </g>
+
+  <!-- CLI -->
+
+  <rect x="90"
+        y="370"
+        width="610"
+        height="64"
+        rx="12"
+        fill="#010409"
+        stroke="#30363d"/>
+
+  <circle cx="118" cy="402" r="6" fill="#ff5f56"/>
+  <circle cx="138" cy="402" r="6" fill="#ffbd2e"/>
+  <circle cx="158" cy="402" r="6" fill="#27c93f"/>
+
+  <text x="185"
+        y="411"
+        font-family="'JetBrains Mono','Fira Code',monospace"
+        font-size="22"
+        fill="#58A6FF">
+
+$ pdftoaudio book.pdf
+
+<tspan fill="#3DDC84">█
+<animate attributeName="opacity"
+         values="1;0;1"
+         dur="1s"
+         repeatCount="indefinite"/>
+</tspan>
+
+  </text>
+
+</svg>
