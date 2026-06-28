@@ -52,7 +52,7 @@
     </td>
     <td align="center" valign="top" width="50%">
       <a href="https://github.com/aryan2-7/PDFtoAudio">
-        <img src="assets/card_pdftoaudio.svg" alt="PDFtoAudio" width="100%"/>
+        <img src="assets/card_pdftoaudio.svg" alt="PDFtoAudio" width="100%"/> 
       </a>
     </td>
   </tr>
