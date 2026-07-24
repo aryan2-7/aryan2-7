@@ -84,9 +84,9 @@
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=aryan2-7&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58A6FF&icon_color=3DDC84&text_color=8B949E&border_radius=8"/>
+<img height="170" src="https://github-stats-extended.vercel.app/api?username=aryan2-7&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58A6FF&icon_color=3DDC84&text_color=8B949E&border_radius=8"/>
 &nbsp;&nbsp;
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aryan2-7&layout=compact&theme=github_dark&hide_border=true&langs_count=6&bg_color=0d1117&title_color=58A6FF&text_color=8B949E&border_radius=8"/>
+<img height="170" src="https://github-stats-extended.vercel.app/api/top-langs/?username=aryan2-7&layout=compact&theme=github_dark&hide_border=true&langs_count=6&bg_color=0d1117&title_color=58A6FF&text_color=8B949E&border_radius=8"/>
 
 <br/><br/>
 
