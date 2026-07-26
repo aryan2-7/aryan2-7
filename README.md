@@ -89,6 +89,9 @@
 &nbsp;&nbsp;
 <img height="170" src="https://github-stats-extended.vercel.app/api/top-langs/?username=aryan2-7&layout=compact&theme=github_dark&hide_border=true&langs_count=6&bg_color=0d1117&title_color=58A6FF&text_color=8B949E&border_radius=8"/>
 
+-->
+
+<div align="center">
 <br/><br/>
 
 <img src="https://streak-stats.demolab.com?user=aryan2-7&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=0d1117&stroke=58A6FF&ring=3DDC84&fire=E6934A&currStreakLabel=58A6FF"/>
@@ -97,10 +100,10 @@
 
 <br/>
 
+
 <div align="center">
   <img src="assets/divider.svg" alt="" width="100%"/>
 </div>
--->
 
 
 <br/>
