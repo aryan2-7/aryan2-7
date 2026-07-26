@@ -80,6 +80,7 @@
 
 <br/>
 
+<!-- 
 ## GitHub Stats
 
 <div align="center">
@@ -99,6 +100,8 @@
 <div align="center">
   <img src="assets/divider.svg" alt="" width="100%"/>
 </div>
+-->
+
 
 <br/>
 
