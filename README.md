@@ -93,8 +93,8 @@
 
 <div align="center">
 <br/><br/>
-
-<img src="https://streak-stats.demolab.com?user=aryan2-7&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&background=0d1117&stroke=58A6FF&ring=3DDC84&fire=E6934A&currStreakLabel=58A6FF"/>
+  
+<a href="https://git.io/streak-stats"><img src="./profile/streak.svg" alt="GitHub Streak" /></a>
 
 </div>
 
