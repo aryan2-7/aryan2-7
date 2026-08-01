@@ -312,8 +312,8 @@ def render_svg(weeks, palette, username, stats):
     cell = 11
     gap = 3
     pad_left = 30
-    pad_top = 20
-    pad_bottom = 30
+    pad_top = 26
+    pad_bottom = 24
 
     n_weeks = len(weeks)
     width = pad_left + n_weeks * (cell + gap) + 20
