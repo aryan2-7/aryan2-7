@@ -238,7 +238,7 @@ def compute_stats(days):
 
 MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-DAY_LABELS = ["Mon", "", "Wed", "", "Fri", "", ""]
+DAY_LABELS = ["", "Mon", "", "Wed", "", "Fri", ""]
 
 
 def build_week_grid(days):
@@ -374,16 +374,6 @@ def render_svg(weeks, palette, username, stats):
         lx += cell + gap
     parts.append(f'<text x="{lx + 4}" y="{legend_y}" fill="#8b949e" font-size="9">More</text>')
 
-    # stats line
-    stats_text = (
-        f'Total: {stats["total"]}  |  Current streak: {stats["current_streak"]}  |  '
-        f'Longest streak: {stats["longest_streak"]}'
-    )
-    parts.append(
-        f'<text x="{lx + 60}" y="{legend_y}" fill="#8b949e" font-size="9" text-anchor="end" '
-        f'transform="translate({width - lx - 64},0)">{stats_text}</text>'
-    )
-
     parts.append("</svg>")
     return "\n".join(parts)
 
@@ -420,7 +410,7 @@ def build_block(ascii_art, svg_path, username, stats):
         f"**Busiest day:** {stats['busiest_date']} ({stats['busiest_count']} contributions)"
     )
     lines.append("")
-    lines.append(f"_Last updated: {datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}_")
+    lines.append(f"_Last updated: {datetime.datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_")
     lines.append("")
     lines.append(END_MARKER)
     return "\n".join(lines)
