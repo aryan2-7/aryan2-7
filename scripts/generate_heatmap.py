@@ -21,6 +21,7 @@ import os
 import sys
 import json
 import datetime
+from datetime import timezone, timedelta
 import urllib.request
 import urllib.error
 
@@ -45,9 +46,9 @@ THEMES = {
 GITHUB_GRAPHQL_URL = "https://api.github.com/graphql"
 
 QUERY = """
-query($userName: String!) {
+query($userName: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $userName) {
-    contributionsCollection {
+    contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
         totalContributions
         weeks {
@@ -61,6 +62,14 @@ query($userName: String!) {
   }
 }
 """
+
+
+def window():
+    """Pin the contribution window to whole UTC days, matching
+    generate_stats.py so every total/streak agrees across the two scripts."""
+    today = datetime.datetime.now(timezone.utc).date()
+    start = today - timedelta(days=364)
+    return (f"{start.isoformat()}T00:00:00Z", f"{today.isoformat()}T23:59:59Z")
 
 
 def load_config():
@@ -102,7 +111,10 @@ def load_config():
 # ---------------------------------------------------------------------------
 
 def fetch_contributions(username, token):
-    body = json.dumps({"query": QUERY, "variables": {"userName": username}}).encode()
+    since, until = window()
+    body = json.dumps({"query": QUERY,
+                       "variables": {"userName": username,
+                                     "from": since, "to": until}}).encode()
     req = urllib.request.Request(
         GITHUB_GRAPHQL_URL,
         data=body,

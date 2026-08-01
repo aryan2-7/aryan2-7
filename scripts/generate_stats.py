@@ -11,22 +11,12 @@ prefers-color-scheme):
   langs.svg     top languages, by bytes and by repo count
   hd-*.svg      section headings, drawn as SVG so they can carry the mono face
 
-The year-at-a-glance is NOT an SVG -- it's a plain Markdown block written
-straight into README.md between <!--STATS:START--> / <!--STATS:END-->
-markers (see write_readme_block()). A hand-positioned 53x7 grid of SVG
-rects has a lot of ways to quietly go wrong (label alignment, month
-anchoring, colour classes) and every one of them is invisible until someone
-looks at the rendered image. A monthly bar made of text characters can't
-misalign -- there's no layout to get wrong -- and if the numbers are ever
-off, they're right there in the diff instead of hidden in a graphic.
-
 Motion is SMIL because GitHub strips <script> from READMEs.
 
 Env:
   GITHUB_TOKEN  required
   GH_LOGIN      user to summarise (default: aryan2-7)
   OUT_DIR       where to write the SVGs (default: assets/)
-  README_PATH   README to patch the stats block into (default: README.md)
 """
 import base64
 import functools
@@ -191,7 +181,7 @@ def summarise(user):
     cur, best = streaks(days)
     by_size, by_repo = languages(user["repositories"]["nodes"])
     return dict(
-        total=cal["totalContributions"],
+        total=sum(d["contributionCount"] for d in days),
         active=sum(1 for d in days if d["contributionCount"] > 0),
         best_week=max(weekly) if weekly else 0,
         weekly=weekly, weeks=weeks,
@@ -397,54 +387,6 @@ def month_bars(weeks):
     return rows
 
 
-def markdown_stats_block(s):
-    """The year-at-a-glance, as Markdown: a small table, no SVG.
-
-    Wrapped in an HTML comment so the block can be found and replaced on
-    the next run without touching anything else in the README.
-    """
-    cur, longest = s["current"], s["longest"]
-
-    def span(r):
-        return f"{pretty(r['start'])} – {pretty(r['end'])}" if r["length"] else "—"
-
-    lines = ["<!--STATS:START-->", "", "**the year**", ""]
-    lines.append(f"`{s['total']}` contributions · `{s['active']}` active days "
-                 f"· best week `{s['best_week']}`")
-    lines.append("")
-    lines.append(f"current streak `{cur['length']}d` ({span(cur)}) · "
-                 f"longest `{longest['length']}d` ({span(longest)})")
-    lines.append("")
-    bars = month_bars(s["weeks"])
-    if bars:
-        col_w = max(len(lab) for lab, _, _ in bars) + 2
-        lines.append("```")
-        lines.append("".join(lab.center(col_w) for lab, _, _ in bars))
-        lines.append("".join(ch.center(col_w) for _, ch, _ in bars))
-        lines.append("```")
-    lines.append("")
-    lines.append("<!--STATS:END-->")
-    return "\n".join(lines)
-
-
-def update_readme_stats(readme_path, block):
-    if not os.path.exists(readme_path):
-        return False
-    with open(readme_path, encoding="utf-8") as f:
-        text = f.read()
-    start, end = "<!--STATS:START-->", "<!--STATS:END-->"
-    if start not in text or end not in text:
-        return False
-    pre = text.split(start)[0]
-    post = text.split(end)[1]
-    new_text = pre + block + post
-    if new_text == text:
-        return False
-    with open(readme_path, "w", encoding="utf-8") as f:
-        f.write(new_text)
-    return True
-
-
 # ---------------------------------------------------------------- main
 
 def write(path, svg):
@@ -465,7 +407,6 @@ def main():
         sys.exit("GITHUB_TOKEN is not set")
     login = os.environ.get("GH_LOGIN", "aryan2-7")
     out_dir = os.environ.get("OUT_DIR", "assets")
-    readme_path = os.environ.get("README_PATH", "README.md")
     os.makedirs(out_dir, exist_ok=True)
 
     s = summarise(fetch(login, token))
@@ -497,10 +438,6 @@ def main():
 
     changed = [n for n, svg in files.items()
                if write(os.path.join(out_dir, n), svg)]
-
-    readme_changed = update_readme_stats(readme_path, markdown_stats_block(s))
-    if readme_changed:
-        changed.append(os.path.basename(readme_path))
 
     print(f"{s['total']} contributions, {s['active']} active days, "
           f"best week {s['best_week']}, current streak "

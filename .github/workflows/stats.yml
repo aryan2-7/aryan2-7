@@ -34,7 +34,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
           OUT_DIR: assets
-          README_PATH: README.md
         run: python3 scripts/generate_stats.py
 
       - name: Generate heatmap

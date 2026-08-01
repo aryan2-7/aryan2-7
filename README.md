@@ -110,7 +110,7 @@ that queries the GitHub GraphQL API once a day and commits changes only<br>
 when the output differs.
 
 The year-at-a-glance section above is plain Markdown rather than an<br>
-image. The same script writes it directly into this README between two<br>
+image. The heatmap script writes it directly into this README between two<br>
 HTML comments. Keeping it as text makes it easier to maintain, avoids<br>
 alignment issues that come with manually positioned SVG layouts, and<br>
 means every value is visible and verifiable instead of being embedded<br>
