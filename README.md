@@ -37,6 +37,11 @@ A system that allows you to generate a retro ASCII + SVG <br>
 GitHub contribution heatmap and auto-insert it into your README <br>
 This is mostly the same system used in this README.md too with some tweaks.
 
+**[CompLab.exe](https://github.com/aryan2-7/CompLabPass)**  &nbsp;·&nbsp; <samp>react.js, vite, gitHub pages</samp><br>
+A C++ lab exam practice site. It provides a question bank with difficulty tabs, <br>
+an in-browser code editor, and real C++ execution against hidden test cases.<br>
+Live: https://aryan2-7.github.io/CompLabPass/
+
 **[airpods-cli](https://github.com/aryan2-7/airpods-cli)** &nbsp;·&nbsp; <samp>python, osascript</samp> <br>
 A macOS command-line tool for AirPods control, built in phases — CLI<br>
 architecture, config, an osascript Bluetooth bridge, and CI/CD.
