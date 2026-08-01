@@ -1,138 +1,126 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="Aryan Khatri" width="100%"/>
-</div>
 
-<br/>
+<img src="./assets/ascii.svg" width="620" alt="Aryan Khatri"/>
 
-<div align="center">
+<img src="./assets/stats.svg" width="620" alt="Contributions in the last year"/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aryankhatr1)
-&nbsp;
-[![Email](https://img.shields.io/badge/E--Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aryan9725@student.ku.edu.np)
-&nbsp;
-[![GitHub](https://img.shields.io/badge/aryan2--7-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aryan2-7)
+[linkedin](https://www.linkedin.com/in/aryankhatr1) &nbsp;·&nbsp;
+[email](mailto:aryan9725@student.ku.edu.np) &nbsp;·&nbsp;
+[github](https://github.com/aryan2-7)
 
 </div>
 
-<br/>
+<img src="./assets/hd-about.svg" width="620" alt="about"/>
 
-<div align="center">
-  <img src="assets/about.svg" alt="About Me" width="100%"/>
-</div>
+> Computer Engineering student at Kathmandu University, Nepal.<br>
+> I'd rather ship something small than talk about something big.
 
-<br/>
+Second-semester student balancing uni, hobbies and projects. Most of my<br>
+time outside class goes into [SmartAttendance](https://github.com/aryan2-7/SmartAttendance) — a face-recognition<br>
+attendance system I'm building with a small team — plus whatever <br>
+tool I've decided I need that week.
 
-<div align="center">
-  <img src="assets/divider.svg" alt="" width="100%"/>
-</div>
+<img src="./assets/hd-stack.svg" width="620" alt="stack"/>
 
-<br/>
+<samp>python &nbsp; c++ &nbsp; click &nbsp; sqlite &nbsp; opencv &nbsp; osascript &nbsp; git &nbsp; linux &nbsp; uv &nbsp;</samp>
 
-## Projects
+<img src="./assets/hd-projects.svg" width="620" alt="projects"/>
 
-<table align="center" width="100%" cellspacing="0" cellpadding="8" border="0">
-  <tr>
-    <td align="center" valign="top" width="50%">
-      <a href="https://github.com/aryan2-7/SmartAttendance">
-        <img src="assets/card_smartattendance.svg" alt="SmartAttendance" width="100%"/>
-      </a>
-    </td>
-    <td align="center" valign="top" width="50%">
-      <a href="https://github.com/aryan2-7/ToDoCLI">
-        <img src="assets/card_todocli.svg" alt="ToDoCLI" width="100%"/>
-      </a>
-    </td>
-  </tr>
+**[SmartAttendance](https://github.com/aryan2-7/SmartAttendance)** &nbsp;·&nbsp; <samp>c++, opencv</samp><br>
+Taking a face-recognition attendance prototype and turning it into<br>
+something a university could actually use: per-subject tracking,<br>
+schedule-based auto-detection, attendance alerts. I lead integration —<br>
+reviewing and merging every PR across a five-person team.
 
-  <tr>
-    <td align="center" valign="top" width="50%">
-      <a href="https://github.com/aryan2-7/airpods-cli">
-        <img src="assets/card_airpods.svg" alt="airpods-cli" width="100%"/>
-      </a>
-    </td>
-    <td align="center" valign="top" width="50%">
-      <a href="https://github.com/aryan2-7/PDFtoAudio">
-        <img src="assets/card_pdftoaudio.svg" alt="PDFtoAudio" width="100%"/> 
-      </a>
-    </td>
-  </tr>
-</table>
+**[asciiContributionHeatmap](https://github.com/aryan2-7/asciiContributionHeatmap)** &nbsp;·&nbsp; <samp>python, gitHub actions</samp><br>
+A system that allows you to generate a retro ASCII + SVG <br>
+GitHub contribution heatmap and auto-insert it into your README <br>
+This is mostly the same system used in this README.md too with some tweaks.
 
-<br/>
+**[airpods-cli](https://github.com/aryan2-7/airpods-cli)** &nbsp;·&nbsp; <samp>python, osascript</samp> <br>
+A macOS command-line tool for AirPods control, built in phases — CLI<br>
+architecture, config, an osascript Bluetooth bridge, and CI/CD.
 
-<div align="center">
-  <img src="assets/divider.svg" alt="" width="100%"/>
-</div>
+**[ToDoCLI](https://github.com/aryan2-7/ToDoCLI)** &nbsp;·&nbsp; <samp>python, click</samp><br>
+A task-tracking CLI, built while learning Click.
 
-<br/>
+**[PDFtoAudio](https://github.com/aryan2-7/PDFtoAudio)** &nbsp;·&nbsp; <samp>python, PyMuPDF, Kokoro</samp><br>
+Turns a PDF into spoken audio.
 
-## Tech Stack
+<img src="./assets/hd-certifications.svg" width="620" alt="certifications"/>
 
-<div align="center">
-  <img src="assets/skills.svg" alt="Tech Stack" width="100%"/>
-</div>
+**[AI Skills Fest 2026](https://www.credly.com/badges/dfadc722-79ae-4e82-8d71-31d25a80cf8a)** &nbsp;·&nbsp; <samp>Microsoft, 2026</samp><br>
+**[CS50P — Introduction to Programming with Python](https://certificates.cs50.io/4c151af0-e81b-4b10-8018-1b55220207cd.pdf)** &nbsp;·&nbsp; <samp>Harvard / edX, 2024</samp><br>
+**[Python Essentials 2](https://www.credly.com/badges/9bfd7438-fb03-4d25-b26b-3358765a5579)** &nbsp;·&nbsp; <samp>Cisco Networking Academy, 2023</samp><br>
+**[Introduction to Data Science](https://www.credly.com/badges/a24b86f1-c57f-49f6-9db3-a3676c4ecdb9)** &nbsp;·&nbsp; <samp>Cisco Networking Academy, 2024</samp>
 
-<br/>
-
-<div align="center">
-  <img src="assets/divider.svg" alt="" width="100%"/>
-</div>
-
-<br/>
-
-<!-- 
-## GitHub Stats
+<img src="./assets/hd-stats.svg" width="620" alt="stats"/>
 
 <div align="center">
 
-<img height="170" src="https://github-stats-extended.vercel.app/api?username=aryan2-7&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58A6FF&icon_color=3DDC84&text_color=8B949E&border_radius=8"/>
-&nbsp;&nbsp;
-<img height="170" src="https://github-stats-extended.vercel.app/api/top-langs/?username=aryan2-7&layout=compact&theme=github_dark&hide_border=true&langs_count=6&bg_color=0d1117&title_color=58A6FF&text_color=8B949E&border_radius=8"/>
+<img src="./assets/streak.svg" width="620" alt="Current and longest streak"/>
 
--->
-
-<div align="center">
-<br/><br/>
-  
-<a href="https://git.io/streak-stats"><img src="./profile/streak.svg" alt="GitHub Streak" /></a>
+<img src="./assets/langs.svg" width="620" alt="Top languages by bytes and by repo"/>
 
 </div>
 
-<br/>
+
+<!-- HEATMAP:START -->
+
+### aryan2-7's Contribution Heatmap
+
+<img src="assets/heatmap.svg" alt="aryan2-7 contribution heatmap" />
+
+<details>
+<summary>ASCII version (click to expand)</summary>
+
+```
+    Jul         Sep     Oct     Nov       Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     
+Mon                                                                                         ▒ ▓ ░ ░ ▓ ▓ ▒   █ 
+                                                                                        █   ▒       ░ █     ▓ 
+Wed                                                     ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ▒ 
+                                                                                          █ ▒   ░       ░ ▓ ░ 
+Fri                                                                                     ▓ ▓ ░   ▒ █ ░ ░   ░ █ 
+                                                                                          █   █     ▒ ▒ █ ▓ █ 
+                                                                                        ▓     ▒ ▒ ▓     ▒ █   
+
+Less   ░ ▒ ▓ █ More
+```
+
+</details>
+
+**Total:** 281 &nbsp;|&nbsp; **Current streak:** 11 days &nbsp;|&nbsp; **Longest streak:** 11 days &nbsp;|&nbsp; **Busiest day:** 2026-07-26 (23 contributions)
+
+_Last updated: 2026-07-31 02:25 UTC_
+
+<!-- HEATMAP:END -->
 
 
-<div align="center">
-  <img src="assets/divider.svg" alt="" width="100%"/>
-</div>
+<img src="./assets/hd-about-this-page.svg" width="620" alt="about this page"/>
+
+Everything on this page is generated locally—nothing is fetched from a<br>
+third-party server. `ascii.svg` is simply plain-text artwork, while the<br>
+stat graphics and section headers are produced by a [scheduled GitHub Action](.github/workflows/stats.yml)<br>
+that queries the GitHub GraphQL API once a day and commits changes only<br>
+when the output differs.
+
+The year-at-a-glance section above is plain Markdown rather than an<br>
+image. The same script writes it directly into this README between two<br>
+HTML comments. Keeping it as text makes it easier to maintain, avoids<br>
+alignment issues that come with manually positioned SVG layouts, and<br>
+means every value is visible and verifiable instead of being embedded<br>
+inside an image.
+
+The SVGs use SMIL animations because GitHub strips JavaScript from<br>
+README files. Since everything is generated within the repository,<br>
+there are no external assets that can fail, disappear, or run into<br>
+rate limits. The section headings are SVGs for a similar reason:<br>
+GitHub also removes custom CSS, making images the only reliable way to<br>
+preserve the intended typography.
+
+The typeface is [JetBrains Mono](scripts/fonts), subsetted to include<br>
+only the glyphs each graphic requires and embedded directly as Base64<br>
+to keep every asset self-contained.
 
 
-<br/>
 
-## What I'm Learning
-
-<div align="center">
-  <img src="assets/learning.svg" alt="Currently Learning" width="100%"/>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="assets/divider.svg" alt="" width="100%"/>
-</div>
-
-<br/>
-
-## Certifications
-
-| | Certificate | Issuer | Year | Verify |
-|:---:|:---|:---|:---:|:---:|
-| ★ | **AI Skills Fest 2026** | Microsoft | 2026 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/dfadc722-79ae-4e82-8d71-31d25a80cf8a) |
-| ★ | **CS50P** — Introduction to Programming with Python | Harvard / edX | 2024 | [![PDF](https://img.shields.io/badge/Certificate-1572B6?style=flat-square&logoColor=white)](https://certificates.cs50.io/4c151af0-e81b-4b10-8018-1b55220207cd.pdf) |
-| ★ | **Python Essentials 2** | Cisco Networking Academy | 2023 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/9bfd7438-fb03-4d25-b26b-3358765a5579) |
-| ★ | **Introduction to Data Science** | Cisco Networking Academy | 2024 | [![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat-square&logo=credly&logoColor=white)](https://www.credly.com/badges/a24b86f1-c57f-49f6-9db3-a3676c4ecdb9) |
-
-<br/>
-
-<div align="center">
-  <img src="assets/footer.svg" alt="" width="100%"/>
-</div>
