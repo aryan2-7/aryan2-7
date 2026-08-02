@@ -109,13 +109,6 @@ stat graphics and section headers are produced by a [scheduled GitHub Action](.g
 that queries the GitHub GraphQL API once a day and commits changes only<br>
 when the output differs.
 
-The year-at-a-glance section above is plain Markdown rather than an<br>
-image. The heatmap script writes it directly into this README between two<br>
-HTML comments. Keeping it as text makes it easier to maintain, avoids<br>
-alignment issues that come with manually positioned SVG layouts, and<br>
-means every value is visible and verifiable instead of being embedded<br>
-inside an image.
-
 The SVGs use SMIL animations because GitHub strips JavaScript from<br>
 README files. Since everything is generated within the repository,<br>
 there are no external assets that can fail, disappear, or run into<br>
