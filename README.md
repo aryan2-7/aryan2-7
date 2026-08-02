@@ -80,23 +80,23 @@ Turns a PDF into spoken audio.
 <summary>ASCII version (click to expand)</summary>
 
 ```
-    Aug         Sep     Oct     Nov       Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     
-                                                                                            ▒ ▓ ░ ░ ▓ ▓ ▒   █ 
-Mon                                                                                     █   ▒       ░ █     ▓ 
-                                                        ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ▒ 
-Wed                                                                                       █ ▒   ░       ░ ▓ ░ 
-                                                                                        ▓ ▓ ░   ▒ ▓ ░ ░   ░ █ 
-Fri                                                                                       █   ▓     ▒ ▒ █ ▓ █ 
-                                                                                        ▓     ▒ ▒ ▓     ▒ ▓ █ 
+    Aug       Sep     Oct     Nov       Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     Au
+                                                                                          ▒ ▓ ░ ░ ▓ ▓ ▒   █ ▒ 
+Mon                                                                                   █   ▒       ░ █     ▓   
+                                                      ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ▒   
+Wed                                                                                     █ ▒   ░       ░ ▓ ░   
+                                                                                      ▓ ▓ ░   ▒ █ ░ ░   ░ █   
+Fri                                                                                     █   █     ▒ ▒ █ ▓ █   
+                                                                                      ▓     ▒ ▒ ▓     ▒ █ █   
 
 Less   ░ ▒ ▓ █ More
 ```
 
 </details>
 
-**Total:** 309 &nbsp;|&nbsp; **Current streak:** 12 days &nbsp;|&nbsp; **Longest streak:** 12 days &nbsp;|&nbsp; **Busiest day:** 2026-07-31 (25 contributions)
+**Total:** 313 &nbsp;|&nbsp; **Current streak:** 13 days &nbsp;|&nbsp; **Longest streak:** 13 days &nbsp;|&nbsp; **Busiest day:** 2026-07-31 (25 contributions)
 
-_Last updated: 2026-08-01 09:09 UTC_
+_Last updated: 2026-08-02 06:14 UTC_
 
 <!-- HEATMAP:END -->
 
