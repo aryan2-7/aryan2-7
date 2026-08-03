@@ -177,7 +177,18 @@ def summarise(user):
     cal = user["contributionsCollection"]["contributionCalendar"]
     weeks = [w["contributionDays"] for w in cal["weeks"]]
     days = [d for w in weeks for d in w]
-    weekly = [sum(d["contributionCount"] for d in w) for w in weeks]
+
+    # GitHub's weeks are calendar weeks (Sun-Sat) regardless of the query's
+    # `from`/`to` bounds. The last entry in `weeks` is whatever days of the
+    # *current* week have happened so far -- on any day but Saturday that's
+    # 1-6 days, not 7. Summed and plotted at the same width as a full week,
+    # that partial bucket reads as a cliff down to near-zero on the right
+    # edge every single day except Saturday, even though nothing regressed.
+    # Drop it from the plotted series; a week that isn't over yet isn't a
+    # comparable data point.
+    plotted_weeks = weeks[:-1] if weeks and weeks[-1][-1]["weekday"] != 6 else weeks
+    weekly = [sum(d["contributionCount"] for d in w) for w in plotted_weeks]
+
     cur, best = streaks(days)
     by_size, by_repo = languages(user["repositories"]["nodes"])
     return dict(

@@ -2,9 +2,21 @@ name: refresh profile stats
 
 # Deliberately no `push` trigger: this job commits SVGs back to the repo,
 # and a push trigger would make it re-run on its own commit.
+#
+# Two cron entries, not one: GitHub Actions' scheduler queues every
+# workflow's exact target minute together, and on a low-traffic repo a
+# single scheduled run is prone to silent delay or drop under that load,
+# indistinguishable from "it just didn't run." A second entry 15 minutes
+# later gives it a retry inside the same day instead of waiting 24h to
+# find out the first one didn't fire. This does NOT fix scheduled
+# workflows being auto-disabled after 60 days with no commits to the
+# default branch on any workflow file -- watch for GitHub's "This
+# scheduled workflow is disabled" banner on the Actions tab, or re-save
+# any workflow file to re-arm it.
 on:
   schedule:
     - cron: "17 5 * * *"
+    - cron: "32 5 * * *"
   workflow_dispatch:
 
 permissions:
@@ -61,5 +73,8 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- $FILES
-          git commit -m "stats: refresh profile graphics"
+          # Trigger type goes in the commit message so `git log` shows
+          # whether cron or a manual run produced it -- without this,
+          # a string of manual runs looks identical to cron working fine.
+          git commit -m "stats: refresh profile graphics [${{ github.event_name }}]"
           git push
