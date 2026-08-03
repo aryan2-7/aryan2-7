@@ -2,7 +2,7 @@
 
 <img src="./assets/ascii.svg" width="620" alt="Aryan Khatri"/>
 
-<img src="./assets/stats.svg" width="620" alt="Contributions in the last year"/>
+<img src="./assets/stats.svg?v=1" width="620" alt="Contributions in the last year"/>
 
 [linkedin](https://www.linkedin.com/in/aryankhatr1) &nbsp;·&nbsp;
 [email](mailto:aryan9725@student.ku.edu.np) &nbsp;·&nbsp;
@@ -63,9 +63,9 @@ Turns a PDF into spoken audio.
 
 <div align="center">
 
-<img src="./assets/streak.svg" width="620" alt="Current and longest streak"/>
+<img src="./assets/streak.svg?v=1" width="620" alt="Current and longest streak"/>
 
-<img src="./assets/langs.svg" width="620" alt="Top languages by bytes and by repo"/>
+<img src="./assets/langs.svg?v=1" width="620" alt="Top languages by bytes and by repo"/>
 
 </div>
 
@@ -74,7 +74,7 @@ Turns a PDF into spoken audio.
 
 ### aryan2-7's Contribution Heatmap
 
-<img src="assets/heatmap.svg" alt="aryan2-7 contribution heatmap" />
+<img src="assets/heatmap.svg?v=1" alt="aryan2-7 contribution heatmap" />
 
 <details>
 <summary>ASCII version (click to expand)</summary>

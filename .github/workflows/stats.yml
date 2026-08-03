@@ -42,6 +42,15 @@ jobs:
           GH_USERNAME: ${{ vars.HEATMAP_USERNAME }}
         run: python3 scripts/generate_heatmap.py
 
+      - name: Bust README image cache
+        # GitHub's camo/raw.githubusercontent.com proxy caches <img> URLs by
+        # exact string. Committing a new SVG under the same URL isn't enough
+        # to bust that cache, so this rewrites the ?v= query param on every
+        # generated-asset <img> tag to the run number, forcing a fresh fetch
+        # each time this workflow runs.
+        run: |
+          sed -i -E "s/(assets\/(stats|streak|langs|heatmap)\.svg)(\?v=[0-9]+)?/\1?v=${{ github.run_number }}/g" README.md
+
       - name: Commit whatever changed
         run: |
           FILES="assets/stats.svg assets/streak.svg assets/langs.svg assets/hd-*.svg assets/heatmap.svg README.md"
