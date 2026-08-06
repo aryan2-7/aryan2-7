@@ -16,7 +16,6 @@ name: refresh profile stats
 on:
   schedule:
     - cron: "17 5 * * *"
-    - cron: "32 5 * * *"
   workflow_dispatch:
 
 permissions:
