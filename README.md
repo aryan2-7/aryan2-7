@@ -2,7 +2,7 @@
 
 <img src="./assets/ascii.svg" width="620" alt="Aryan Khatri"/>
 
-<img src="./assets/stats.svg?v=37" width="620" alt="Contributions in the last year"/>
+<img src="./assets/stats.svg?v=38" width="620" alt="Contributions in the last year"/>
 
 [linkedin](https://www.linkedin.com/in/aryankhatr1) &nbsp;·&nbsp;
 [email](mailto:aryan9725@student.ku.edu.np) &nbsp;·&nbsp;
@@ -63,9 +63,9 @@ Turns a PDF into spoken audio.
 
 <div align="center">
 
-<img src="./assets/streak.svg?v=37" width="620" alt="Current and longest streak"/>
+<img src="./assets/streak.svg?v=38" width="620" alt="Current and longest streak"/>
 
-<img src="./assets/langs.svg?v=37" width="620" alt="Top languages by bytes and by repo"/>
+<img src="./assets/langs.svg?v=38" width="620" alt="Top languages by bytes and by repo"/>
 
 </div>
 
@@ -74,7 +74,7 @@ Turns a PDF into spoken audio.
 
 ### aryan2-7's Contribution Heatmap
 
-<img src="assets/heatmap.svg?v=37" alt="aryan2-7 contribution heatmap" />
+<img src="assets/heatmap.svg?v=38" alt="aryan2-7 contribution heatmap" />
 
 <details>
 <summary>ASCII version (click to expand)</summary>
@@ -83,7 +83,7 @@ Turns a PDF into spoken audio.
     Aug Sep     Oct     Nov       Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     Aug     
                                                                                     ░ ▓ ░ ░ ▓ ▓ ░   █ ▓ ▒ ░ ▒ 
 Mon                                                                             █   ░       ░ █     ▓ ▓ ▓ ▒ ░ 
-                                                ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ░ ░ ▓ ░   
+                                                ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ░ ░ ▓ ░ ░ 
 Wed                                                                               █ ▒   ░       ░ ▓ ░ ▒ ▓ ▓   
                                                                                 ▓ ▓ ░   ░ █ ░ ░   ░ █ ▒ ░ ░   
 Fri                                                                               █   █     ▒ ▒ █ ▓ █ ▒ ▓ ░   
@@ -94,9 +94,9 @@ Less   ░ ▒ ▓ █ More
 
 </details>
 
-**Total:** 400 &nbsp;|&nbsp; **Current streak:** 0 days &nbsp;|&nbsp; **Longest streak:** 35 days &nbsp;|&nbsp; **Busiest day:** 2026-07-31 (25 contributions)
+**Total:** 402 &nbsp;|&nbsp; **Current streak:** 0 days &nbsp;|&nbsp; **Longest streak:** 36 days &nbsp;|&nbsp; **Busiest day:** 2026-07-31 (25 contributions)
 
-_Last updated: 2026-08-25 05:50 UTC_
+_Last updated: 2026-08-26 05:53 UTC_
 
 <!-- HEATMAP:END -->
 
