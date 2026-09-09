@@ -2,7 +2,7 @@
 
 <img src="./assets/ascii.svg" width="620" alt="Aryan Khatri"/>
 
-<img src="./assets/stats.svg?v=53" width="620" alt="Contributions in the last year"/>
+<img src="./assets/stats.svg?v=54" width="620" alt="Contributions in the last year"/>
 
 [linkedin](https://www.linkedin.com/in/aryankhatr1) &nbsp;·&nbsp;
 [email](mailto:aryan9725@student.ku.edu.np) &nbsp;·&nbsp;
@@ -63,9 +63,9 @@ Turns a PDF into spoken audio.
 
 <div align="center">
 
-<img src="./assets/streak.svg?v=53" width="620" alt="Current and longest streak"/>
+<img src="./assets/streak.svg?v=54" width="620" alt="Current and longest streak"/>
 
-<img src="./assets/langs.svg?v=53" width="620" alt="Top languages by bytes and by repo"/>
+<img src="./assets/langs.svg?v=54" width="620" alt="Top languages by bytes and by repo"/>
 
 </div>
 
@@ -74,29 +74,29 @@ Turns a PDF into spoken audio.
 
 ### aryan2-7's Contribution Heatmap
 
-<img src="assets/heatmap.svg?v=53" alt="aryan2-7 contribution heatmap" />
+<img src="assets/heatmap.svg?v=54" alt="aryan2-7 contribution heatmap" />
 
 <details>
 <summary>ASCII version (click to expand)</summary>
 
 ```
     Sep     Oct     Nov       Dec     Jan     Feb     Mar       Apr     May       Jun     Jul     Aug       Se
-                                                                                ▒ ▓ ░ ░ ▓ █ ▒   █ █ ▒ ▒ ▒ ░ █ 
-Mon                                                                         █   ▒       ░ █     ▓ ▓ ▓ ▒ ▒ ▒ ▒ 
-                                            ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ▒ ░ ▓ ▒ ▒ ▒   
-Wed                                                                           █ ▒   ░       ░ ▓   ▒ ▓ ▓ ░ █   
-                                                                            █ ▓ ░   ▒ ▓ ░ ░   ░   ▒ ░ ░ ▒ █   
-Fri                                                                           █   █     ▒ ▒ █ █ █ ▒ ▓ ░ ▒ ░   
-                                                                            █     ▒ ▒ █     ▒ █ █ ▓ █ ▒ ░ ░   
+                                                                                ░ ▓ ░ ░ ▓ █ ░   █ █ ▒ ░ ▒ ░ █ 
+Mon                                                                         █   ░       ░ █     ▓ ▓ ▓ ▒ ░ ▒ ▒ 
+                                            ▒ ░                               ░ ▓   ▓ ▒   ░ ░ █ ░ ░ ▓ ░ ░ ░ ▓ 
+Wed                                                                           █ ▒   ░       ░ ▓   ▒ ▓ ▓ ░ █ ▓ 
+                                                                            █ ▓ ░   ░ ▓ ░ ░   ░   ▒ ░ ░ ▒ █   
+Fri                                                                           █   █     ▒ ▒ █ █ █ ▒ ▓ ░ ░ ░   
+                                                                            █     ▒ ▒ █     ▒ █ █ ▓ █ ░ ░ ░   
 
 Less   ░ ▒ ▓ █ More
 ```
 
 </details>
 
-**Total:** 426 &nbsp;|&nbsp; **Current streak:** 0 days &nbsp;|&nbsp; **Longest streak:** 39 days &nbsp;|&nbsp; **Busiest day:** 2026-07-26 (22 contributions)
+**Total:** 437 &nbsp;|&nbsp; **Current streak:** 41 days &nbsp;|&nbsp; **Longest streak:** 41 days &nbsp;|&nbsp; **Busiest day:** 2026-07-26 (22 contributions)
 
-_Last updated: 2026-09-08 09:47 UTC_
+_Last updated: 2026-09-09 09:51 UTC_
 
 <!-- HEATMAP:END -->
 
