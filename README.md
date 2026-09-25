@@ -2,7 +2,7 @@
 
 <img src="./assets/ascii.svg" width="620" alt="Aryan Khatri"/>
 
-<img src="./assets/stats.svg?v=69" width="620" alt="Contributions in the last year"/>
+<img src="./assets/stats.svg?v=70" width="620" alt="Contributions in the last year"/>
 
 [linkedin](https://www.linkedin.com/in/aryankhatr1) &nbsp;·&nbsp;
 [email](mailto:aryan9725@student.ku.edu.np) &nbsp;·&nbsp;
@@ -63,9 +63,9 @@ Turns a PDF into spoken audio.
 
 <div align="center">
 
-<img src="./assets/streak.svg?v=69" width="620" alt="Current and longest streak"/>
+<img src="./assets/streak.svg?v=70" width="620" alt="Current and longest streak"/>
 
-<img src="./assets/langs.svg?v=69" width="620" alt="Top languages by bytes and by repo"/>
+<img src="./assets/langs.svg?v=70" width="620" alt="Top languages by bytes and by repo"/>
 
 </div>
 
@@ -74,7 +74,7 @@ Turns a PDF into spoken audio.
 
 ### aryan2-7's Contribution Heatmap
 
-<img src="assets/heatmap.svg?v=69" alt="aryan2-7 contribution heatmap" />
+<img src="assets/heatmap.svg?v=70" alt="aryan2-7 contribution heatmap" />
 
 <details>
 <summary>ASCII version (click to expand)</summary>
@@ -96,7 +96,7 @@ Less   ░ ▒ ▓ █ More
 
 **Total:** 534 &nbsp;|&nbsp; **Current streak:** 0 days &nbsp;|&nbsp; **Longest streak:** 24 days &nbsp;|&nbsp; **Busiest day:** 2026-09-22 (24 contributions)
 
-_Last updated: 2026-09-24 10:08 UTC_
+_Last updated: 2026-09-25 10:15 UTC_
 
 <!-- HEATMAP:END -->
 
