@@ -6,10 +6,10 @@ No third-party services and no dependencies beyond the standard library.
 Outputs, all sharing one visual language (mono ink, transparent background,
 left-to-right reveal with a cursor riding the edge, dark/light via
 prefers-color-scheme):
-  stats.svg     hero total + weekly sparkline
-  streak.svg    current and longest streak
-  langs.svg     top languages, by bytes and by repo count
-  hd-*.svg      section headings, drawn as SVG so they can carry the mono face
+stats.svg     hero total + weekly sparkline
+streak.svg    current and longest streak
+langs.svg     top languages, by bytes and by repo count
+hd-*.svg      section headings, drawn as SVG so they can carry the mono face
 
 Motion is SMIL because GitHub strips <script> from READMEs.
 
@@ -75,9 +75,11 @@ def face(filename, weight):
     """
     with open(os.path.join(FONT_DIR, filename), "rb") as f:
         b64 = base64.b64encode(f.read()).decode("ascii")
-    return (f"@font-face{{font-family:JBMono;font-style:normal;"
-            f"font-weight:{weight};font-display:block;"
-            f"src:url(data:font/woff2;base64,{b64}) format('woff2')}")
+    return (
+        f"@font-face{{font-family:JBMono;font-style:normal;"
+        f"font-weight:{weight};font-display:block;"
+        f"src:url(data:font/woff2;base64,{b64}) format('woff2')}}"
+    )
 
 
 def font_text():
