@@ -17,7 +17,7 @@ Env:
   GITHUB_TOKEN  required
   GH_LOGIN      user to summarise (default: aryan2-7)
   OUT_DIR       where to write the SVGs (default: assets/)
-"""
+ """
 import base64
 import functools
 import json
@@ -57,7 +57,7 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 """
 
 LIGHT = dict(data="#57606a", emph="#24292f", dim="#8c959f",
-             rule="#d8dee4", surface="#ffffff")
+              rule="#d8dee4", surface="#ffffff")
 DARK = dict(data="#c9d1d9", emph="#f0f6fc", dim="#8b949e",
             rule="#30363d", surface="#0d1117")
 
@@ -77,7 +77,7 @@ def face(filename, weight):
         b64 = base64.b64encode(f.read()).decode("ascii")
     return (f"@font-face{{font-family:JBMono;font-style:normal;"
             f"font-weight:{weight};font-display:block;"
-            f"src:url(data:font/woff2;base64,{b64}) format('woff2')}}")
+            f"src:url(data:font/woff2;base64,{b64}) format('woff2')}")
 
 
 def font_text():
@@ -135,15 +135,19 @@ def streaks(days):
     isn't over yet. Any earlier zero does.
     """
     best = dict(length=0, start=None, end=None)
-    run, run_start = 0, None
+    run, run_start, run_end = 0, None, None
     for d in days:
         if d["contributionCount"] > 0:
             run += 1
             run_start = run_start or d["date"]
-            if run > best["length"]:
-                best = dict(length=run, start=run_start, end=d["date"])
+            run_end = d["date"]
         else:
-            run, run_start = 0, None
+            if run > best["length"]:
+                best = dict(length=run, start=run_start, end=run_end)
+            run, run_start, run_end = 0, None, None
+
+    if run > best["length"]:
+        best = dict(length=run, start=run_start, end=run_end)
 
     cur = dict(length=0, start=None, end=None)
     tail = days[:-1] if days and days[-1]["contributionCount"] == 0 else days
