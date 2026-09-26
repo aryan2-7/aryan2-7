@@ -1,8 +1,14 @@
 name: refresh profile stats
 
+# Deliberately no `push` trigger: this job commits SVGs back to the repo,
+# and a push trigger would make it re-run on its own commit.
+#
+# Two cron entries give the workflow two chances to run each day.
+# GitHub Actions scheduled workflows use UTC.
 on:
   schedule:
     - cron: "17 5 * * *"
+    - cron: "32 5 * * *"
   workflow_dispatch:
 
 permissions:
@@ -46,9 +52,7 @@ jobs:
 
       - name: Bust README image cache
         run: |
-          sed -i -E \
-            "s|(assets/(stats|streak|langs|heatmap)\.svg)(\?v=[0-9]+)?|\1?v=${{ github.run_number }}|g" \
-            README.md
+          sed -i -E 's#(assets/(stats|streak|langs|heatmap)\.svg)(\?v=[0-9]+)?#\1?v=${{ github.run_number }}#g' README.md
 
       - name: Commit whatever changed
         run: |
