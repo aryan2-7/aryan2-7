@@ -29,10 +29,10 @@ from datetime import date, datetime, timedelta, timezone
 API = "https://api.github.com/graphql"
 
 # Two things are pinned for determinism:
-#  * the contribution window, to whole UTC days -- otherwise "the past year"
+#  * the contribution window, to whole UTC days, otherwise "the past year"
 #    is measured from request time and days drift between week buckets,
 #    moving the sparkline a fraction of a pixel and committing noise nightly;
-#  * privacy: PUBLIC on repositories -- otherwise a personal token sees
+#  * privacy: PUBLIC on repositories, otherwise a personal token sees
 #    private repos and a workflow token doesn't, and language totals disagree
 #    depending on which one ran.
 QUERY = """
@@ -133,7 +133,7 @@ def pretty(iso):
 def streaks(days):
     """Current and longest runs of days with at least one contribution.
 
-    A zero on the final day doesn't break the current streak -- the day
+    A zero on the final day doesn't break the current streak. The day
     isn't over yet. Any earlier zero does.
     """
     best = dict(length=0, start=None, end=None)
@@ -186,7 +186,7 @@ def summarise(user):
 
     # GitHub's weeks are calendar weeks (Sun-Sat) regardless of the query's
     # `from`/`to` bounds. The last entry in `weeks` is whatever days of the
-    # *current* week have happened so far -- on any day but Saturday that's
+    # *current* week have happened so far, on any day but Saturday that's
     # 1-6 days, not 7. Summed and plotted at the same width as a full week,
     # that partial bucket reads as a cliff down to near-zero on the right
     # edge every single day except Saturday, even though nothing regressed.
@@ -382,7 +382,7 @@ def draw_heading(word):
 def month_bars(weeks):
     """One text bar per calendar month: total contributions that month,
     against 8 density steps of block characters. No positioning, no
-    colour classes to wire up -- just counting and a lookup table, so
+    colour classes to wire up. Just counting and a lookup table, so
     there's very little left for this to get wrong in a way that isn't
     immediately obvious by reading the numbers next to it.
     """
@@ -430,14 +430,14 @@ def main():
 
     # A token that can't see this account's real activity (wrong scope, or
     # the repo-scoped default GITHUB_TOKEN instead of a personal one)
-    # doesn't error -- GraphQL just returns a calendar of mostly zeros. That
+    # doesn't error. GraphQL just returns a calendar of mostly zeros. That
     # used to ship silently as a near-empty graphic. Catch it here instead:
     # an active account with well under a handful of contributions in a
     # full year is far more likely a permissions problem than reality.
     if s["total"] < 5:
         sys.exit(
             f"only {s['total']} contributions came back for {login} over "
-            f"the last year -- before assuming the token is the problem, "
+            f"the last year, before assuming the token is the problem, "
             f"print the raw GraphQL response and check it against what "
             f"github.com/{login} shows directly. Refusing to commit a "
             f"near-empty result."

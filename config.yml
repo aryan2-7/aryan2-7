@@ -1,7 +1,7 @@
-# ASCII Contribution Heatmap — configuration
+# ASCII Contribution Heatmap config
 #
 # These values are defaults. Any of them can be overridden by setting an
-# environment variable of the same name (uppercased) in your workflow —
+# environment variable of the same name (uppercased) in your workflow:
 # see .github/workflows/update-heatmap.yml.
 #
 # username and token are usually best kept OUT of this file (use repo

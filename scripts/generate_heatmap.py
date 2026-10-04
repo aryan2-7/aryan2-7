@@ -338,7 +338,7 @@ def render_svg(weeks, palette, username, stats):
             if month != last_month:
                 x = pad_left + col * (cell + gap)
                 if last_label_x is not None and x - last_label_x < min_label_gap:
-                    # too close to the previous label -- drop the earlier
+                    # too close to the previous label, drop the earlier
                     # one and let this month win instead
                     del parts[last_label_idx]
                 parts.append(

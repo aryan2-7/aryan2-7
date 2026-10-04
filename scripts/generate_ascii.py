@@ -27,12 +27,12 @@ FONT_SRC = os.path.join(HERE, "fonts", "JetBrainsMono-Regular.ttf")
 FONT_OUT = os.path.join(HERE, "fonts", "jbmono-ramp.woff2")
 
 # Sparse -> dense. Letters included (not just punctuation/symbols) so the
-# ramp has enough steps to hold real tonal range at this resolution --
+# ramp has enough steps to hold real tonal range at this resolution,
 # matching the reference, which reads clearly as a face despite being
 # built from dense, letter-heavy noise rather than a handful of symbols.
 RAMP = " .`'\",:;-~^\"<>i!lI?/\\|()1{}[]rcvunxzjftLCJUYXZO0Qmwqpdbkhao*#MW&8%B@$"
 
-COLS = 130            # character columns -- dense, matching the reference
+COLS = 130            # character columns, dense, matching the reference
 CHAR_ADV = 0.600      # JetBrains Mono advance width, in em
 FONT_SIZE = 6.6
 ROW_H = FONT_SIZE * 1.05
@@ -44,7 +44,7 @@ LIGHT_INK = "#57606a"
 DARK_INK = "#c9d1d9"
 
 # Background speckle: outside the subject's silhouette, scatter a sparse
-# noise texture instead of leaving flat blank space -- this is most of what
+# noise texture instead of leaving flat blank space. This is most of what
 # gives the reference its "gritty photo" read rather than a clean sticker
 # cutout. Density and character weight are both low so it stays a texture,
 # not a second subject.
@@ -58,7 +58,7 @@ def auto_levels(lum, mask, lo_pct=1.0, hi_pct=99.0):
     Without this, a portrait shot in ordinary indoor light (a narrow
     real-world luminance band, e.g. 40-190) maps almost entirely into the
     middle of any ramp and reads as a flat grey block instead of showing
-    real tonal structure -- across faces the "same ramp with no per-image
+    real tonal structure, across faces the "same ramp with no per-image
     normalisation" bug is silent until you look at the render.
     """
     vals = lum[mask]
