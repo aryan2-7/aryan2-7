@@ -63,6 +63,7 @@ jobs:
           git add assets/streak.svg
           git add assets/langs.svg
           git add assets/heatmap.svg
+          git add assets/streak-record.json
           git add assets/hd-*.svg
           git add README.md
 

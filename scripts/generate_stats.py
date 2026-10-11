@@ -162,6 +162,66 @@ def streaks(days):
     return cur, best
 
 
+RECORD_FILENAME = "streak-record.json"
+
+
+def record_path(out_dir):
+    """Location of the persistent all-time longest-streak record.
+
+    Overridable via STREAK_RECORD env for tests; otherwise lives next to
+    the other generated assets so the existing workflow commit covers it.
+    """
+    override = os.environ.get("STREAK_RECORD")
+    if override:
+        return override
+    return os.path.join(out_dir, RECORD_FILENAME)
+
+
+def load_record(path):
+    """Read the stored all-time best. Returns None when missing/corrupt."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        length = int(data.get("longest_length", 0))
+        if length <= 0:
+            return None
+        return dict(length=length,
+                    start=data.get("longest_start"),
+                    end=data.get("longest_end"))
+    except (OSError, ValueError, TypeError, AttributeError):
+        return None
+
+
+def save_record(path, longest):
+    payload = {
+        "longest_length": longest["length"],
+        "longest_start": longest["start"],
+        "longest_end": longest["end"],
+        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+        f.write("\n")
+
+
+def resolve_longest(stored, window_best, current):
+    """Pick the effective longest streak without ever decreasing it.
+
+    Only bumps the record iff the freshly computed window best (which
+    includes the current streak) beats what is stored.
+    Returns (effective_dict, changed_bool).
+    """
+    effective = dict(stored) if stored else dict(length=0, start=None, end=None)
+    for cand in (window_best, current):
+        if cand and cand.get("length", 0) > effective.get("length", 0):
+            effective = dict(length=cand["length"],
+                             start=cand.get("start"),
+                             end=cand.get("end"))
+    changed = (stored is None and effective["length"] > 0) or (
+        stored is not None and effective["length"] > stored["length"])
+    return effective, changed
+
+
 def languages(repos):
     by_size, by_repo = {}, {}
     for node in repos:
@@ -442,6 +502,22 @@ def main():
             f"github.com/{login} shows directly. Refusing to commit a "
             f"near-empty result."
         )
+
+    # Persistent all-time longest: the API window only covers 365 days, so a
+    # record that ages out would otherwise silently drop (e.g. 42 -> 24).
+    # Keep it in a committed JSON file and only bump it when the fresh
+    # window actually beats it.
+    rpath = record_path(out_dir)
+    stored = load_record(rpath)
+    window_best = s["longest"]
+    s["longest"], record_changed = resolve_longest(stored, window_best, s["current"])
+    if record_changed:
+        save_record(rpath, s["longest"])
+        print(f"longest streak record updated: "
+              f"{(stored or {}).get('length', 0)} -> {s['longest']['length']} ({rpath})")
+    else:
+        print(f"longest streak kept from record: {s['longest']['length']} "
+              f"(window best {window_best['length']})")
 
     files = {
         "stats.svg": draw_stats(s),

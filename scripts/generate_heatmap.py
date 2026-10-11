@@ -209,16 +209,27 @@ def compute_stats(days):
     while idx >= 0 and by_date[dates_sorted[idx]] > 0:
         current_streak += 1
         idx -= 1
+    current_start = dates_sorted[idx + 1] if current_streak else None
+    current_end = dates_sorted[-1] if current_streak and by_date[dates_sorted[-1]] > 0 else (
+        dates_sorted[idx + current_streak] if current_streak else None)
 
-    # longest streak overall
+    # longest streak overall (within the 365-day API window)
     longest_streak = 0
+    longest_start = None
+    longest_end = None
     running = 0
+    run_start = None
     for date in dates_sorted:
         if by_date[date] > 0:
+            run_start = run_start or date
             running += 1
-            longest_streak = max(longest_streak, running)
+            if running > longest_streak:
+                longest_streak = running
+                longest_start = run_start
+                longest_end = date
         else:
             running = 0
+            run_start = None
 
     busiest_date = max(by_date, key=by_date.get)
     busiest_count = by_date[busiest_date]
@@ -226,10 +237,65 @@ def compute_stats(days):
     return {
         "total": total,
         "current_streak": current_streak,
+        "current_start": current_start,
+        "current_end": current_end,
         "longest_streak": longest_streak,
+        "longest_start": longest_start,
+        "longest_end": longest_end,
         "busiest_date": busiest_date,
         "busiest_count": busiest_count,
     }
+
+
+RECORD_FILENAME = "streak-record.json"
+
+
+def record_path(output_dir):
+    """Same record file as generate_stats.py so both outputs agree."""
+    override = os.environ.get("STREAK_RECORD")
+    if override:
+        return override
+    return os.path.join(output_dir, RECORD_FILENAME)
+
+
+def load_record(path):
+    """Read the stored all-time best. Returns None when missing/corrupt."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        length = int(data.get("longest_length", 0))
+        if length <= 0:
+            return None
+        return {"length": length,
+                "start": data.get("longest_start"),
+                "end": data.get("longest_end")}
+    except (OSError, ValueError, TypeError, AttributeError):
+        return None
+
+
+def save_record(path, longest):
+    payload = {
+        "longest_length": longest["length"],
+        "longest_start": longest["start"],
+        "longest_end": longest["end"],
+        "updated": datetime.datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2)
+        f.write("\n")
+
+
+def resolve_longest(stored, window_best, current):
+    """Effective longest never decreases; bumps only when window beats it."""
+    effective = dict(stored) if stored else {"length": 0, "start": None, "end": None}
+    for cand in (window_best, current):
+        if cand and cand.get("length", 0) > effective.get("length", 0):
+            effective = {"length": cand["length"],
+                         "start": cand.get("start"),
+                         "end": cand.get("end")}
+    changed = (stored is None and effective["length"] > 0) or (
+        stored is not None and effective["length"] > stored["length"])
+    return effective, changed
 
 
 # ---------------------------------------------------------------------------
@@ -449,6 +515,29 @@ def main():
     days, total = fetch_contributions(cfg["username"], cfg["token"])
     days = compute_levels(days)
     stats = compute_stats(days)
+
+    # Persistent all-time longest shared with generate_stats.py: the API
+    # window only covers 365 days, so an old record would otherwise drop
+    # out (e.g. 42 -> 24). Only bump the stored record when the fresh
+    # window actually beats it.
+    rpath = record_path(cfg["output_dir"])
+    stored = load_record(rpath)
+    window_best = {"length": stats["longest_streak"],
+                   "start": stats.get("longest_start"),
+                   "end": stats.get("longest_end")}
+    current = {"length": stats["current_streak"],
+               "start": stats.get("current_start"),
+               "end": stats.get("current_end")}
+    effective, record_changed = resolve_longest(stored, window_best, current)
+    stats["longest_streak"] = effective["length"]
+    if record_changed:
+        os.makedirs(os.path.dirname(rpath) or ".", exist_ok=True)
+        save_record(rpath, effective)
+        print(f"longest streak record updated: "
+              f"{(stored or {}).get('length', 0)} -> {effective['length']} ({rpath})")
+    else:
+        print(f"longest streak kept from record: {effective['length']} "
+              f"(window best {window_best['length']})")
 
     weeks = build_week_grid(days)
     ascii_art = render_ascii(weeks)
