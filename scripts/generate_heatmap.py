@@ -200,18 +200,24 @@ def compute_stats(days):
 
     total = sum(by_date.values())
 
-    # current streak: walk backward from most recent day
+    # current streak: walk backward from most recent day.
+    # A zero on the final day doesn't break the streak — the day isn't
+    # over yet. Any earlier zero does. (Mirrors streaks() in
+    # generate_stats.py so streak.svg and the README block agree.)
     current_streak = 0
-    today = dates_sorted[-1]
-    idx = len(dates_sorted) - 1
-    # allow the streak to "count" through today even if today is 0 so far,
-    # by starting the check from the most recent day with data
-    while idx >= 0 and by_date[dates_sorted[idx]] > 0:
-        current_streak += 1
-        idx -= 1
-    current_start = dates_sorted[idx + 1] if current_streak else None
-    current_end = dates_sorted[-1] if current_streak and by_date[dates_sorted[-1]] > 0 else (
-        dates_sorted[idx + current_streak] if current_streak else None)
+    current_start = None
+    current_end = None
+    if dates_sorted:
+        tail_end_idx = len(dates_sorted) - 1
+        if by_date[dates_sorted[tail_end_idx]] == 0:
+            tail_end_idx -= 1  # ignore today-in-progress
+        idx = tail_end_idx
+        while idx >= 0 and by_date[dates_sorted[idx]] > 0:
+            current_streak += 1
+            idx -= 1
+        if current_streak:
+            current_start = dates_sorted[idx + 1]
+            current_end = dates_sorted[tail_end_idx]
 
     # longest streak overall (within the 365-day API window)
     longest_streak = 0
@@ -231,8 +237,8 @@ def compute_stats(days):
             running = 0
             run_start = None
 
-    busiest_date = max(by_date, key=by_date.get)
-    busiest_count = by_date[busiest_date]
+    busiest_date = max(by_date, key=by_date.get) if by_date else None
+    busiest_count = by_date[busiest_date] if busiest_date else 0
 
     return {
         "total": total,
@@ -530,6 +536,8 @@ def main():
                "end": stats.get("current_end")}
     effective, record_changed = resolve_longest(stored, window_best, current)
     stats["longest_streak"] = effective["length"]
+    stats["longest_start"] = effective["start"]
+    stats["longest_end"] = effective["end"]
     if record_changed:
         os.makedirs(os.path.dirname(rpath) or ".", exist_ok=True)
         save_record(rpath, effective)

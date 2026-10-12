@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: refresh-profile-stats
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -26,6 +26,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -73,4 +76,15 @@ jobs:
           fi
 
           git commit -m "stats: refresh profile graphics [${{ github.event_name }}]"
-          git push
+
+          # The remote may have moved since checkout (overlapping run or
+          # manual push). Rebase our commit on top so push fast-forwards.
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          git fetch origin "${BRANCH}" --quiet
+          if ! git rebase "origin/${BRANCH}"; then
+            echo "Rebase failed — aborting."
+            git rebase --abort || true
+            exit 1
+          fi
+
+          git push origin "HEAD:${BRANCH}"
